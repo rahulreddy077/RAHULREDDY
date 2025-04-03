@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance Requisition System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Maintenance Requisition System</h1>
+        <div id="login-form">
+            <h2>Login</h2>
+            <input type="text" id="reg_no" placeholder="Registration Number" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+        </div>
+
+        <div id="request-form" style="display:none;">
+            <h2>Submit Maintenance Request</h2>
+            <input type="text" id="type_of_work" placeholder="Type of Work" required>
+            <textarea id="suggestions" placeholder="Suggestions/Improvements"></textarea>
+            <textarea id="comments" placeholder="Comments"></textarea>
+            <input type="file" id="proof" accept=".pdf,.doc,.jpg,.jpeg,.png">
+            <button onclick="submitRequest()">Submit Request</button>
+        </div>
+
+        <div id="requests-list" style="display:none;">
+            <h2>Your Requests</h2>
+            <ul id="requests"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
